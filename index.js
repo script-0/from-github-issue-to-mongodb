@@ -114,13 +114,7 @@ const run = async (env, eventPayload, fs, core, yaml) =>{
     }
 
     const json = Object.fromEntries(result);
-
-    const options = json["options"]
-
-    delete json["options"]
-
-    json["options"] = options.split("\n\n")
-
+    
     // @ts-ignore
     const client = new MongoClient(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
