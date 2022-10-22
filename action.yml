@@ -1,8 +1,12 @@
-name: 'GitHub Issue Parser'
-description: 'Use this action to convert issues into a unified JSON structure.'
+name: 'From GitHub Issue To MongoDB'
+description: 'Use this action to convert issues into a unified JSON structure and save them in a MongoDB Collection.'
 branding:
   icon: "check-square"
   color: green
+env:
+  MONGO_URI: MongoDB URI
+  MONGO_DB: Database name to use
+  MONGO_COLLECTION: Collection to use
 inputs:
   template-path:
     description: 'Path to the issue form template file'
